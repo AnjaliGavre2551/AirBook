@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-admindashord',
@@ -7,4 +9,19 @@ import { Component } from '@angular/core';
 })
 export class AdmindashordComponent {
 
+ 
+  private url=`http://localhost:7777/flights-controller/delete-flight/{flightId}`;
+  constructor(private http:HttpClient){}
+  flightId!:number;
+   deleteFlight():Observable<any>{
+    const burl=`${this.url}/delete-flight/$flightId`;
+     return this.http.delete<any>(burl);
+   }
+
+  // deleteFlight(flightId: number) {
+  //   this.deleteFlight(flightId)
+  //     .subscribe(() => {
+  //         console.log('Flight deleted successfully!');
+  //       })
+  //    }
 }

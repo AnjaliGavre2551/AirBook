@@ -1,5 +1,6 @@
+<form (ngSubmit)="deleteFlight()">
 <div>
-    <nav class="container ">
+    <nav class="container">
         <div class="d-flex justify-content-between align-items-center">
             <div id="nav-btn" class="d-flex align-items-center">
                 <h3>Admin panel</h3>
@@ -15,8 +16,7 @@
             </div>
         </div>
     </nav>
-
-    <div class="container">
+ <div class="container">
         <div class="row">
             <div class="col-md-3">
                 <div class="box coloredbox1">
@@ -68,8 +68,8 @@
                         <td>@mdo</td>
                         <td>@mdo</td>
                         <td>
-                            <button class="btn btn-primary edit-button">Edit</button>
-                            <button class="btn btn-danger delete-button">Delete</button>
+                            <button class="btn btn-primary edit-button"><a href="/addflight">Edit</a></button>
+                            <button class="btn btn-danger delete-button" (click)="deleteFlight()">Delete</button>
                         </td>
                     </tr>
                     <tr>
@@ -79,7 +79,7 @@
                         <td>@fat</td>
                         <td>@mdo</td>
                         <td>
-                            <button class="btn btn-primary edit-button">Edit</button>
+                            <button class="btn btn-primary edit-button"><a href="/addflight">Edit</a></button>
                             <button class="btn btn-danger delete-button">Delete</button>
                         </td>
                     </tr>
@@ -90,13 +90,12 @@
                         <td>@twitter</td>
                         <td>@mdo</td>
                         <td>
-                            <button class="btn btn-primary edit-button">Edit</button>
+                            <button class="btn btn-primary edit-button"><a href="/addflight">Edit</a></button>
                             <button class="btn btn-danger delete-button">Delete</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-
-    </div>
+        </div> 
+       </div>
 </div>
